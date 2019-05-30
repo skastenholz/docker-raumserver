@@ -1,5 +1,5 @@
 # create image from LTS node
-FROM arm32v7/node:carbon
+FROM arm32v7/node:carbon-jessie
 
 # Create app directory
 WORKDIR /usr/src/raumserver
