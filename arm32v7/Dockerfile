@@ -1,6 +1,5 @@
 # create image from LTS node
-#FROM arm32v6/node:carbon
-FROM resin/raspberrypi-node
+FROM balenalib/raspberry-pi-node:8
 
 # Create app directory
 WORKDIR /usr/src/raumserver
@@ -10,8 +9,6 @@ WORKDIR /usr/src/raumserver
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN ls -lah .
-RUN npm help
 RUN npm install
 
 # Bundle app source
