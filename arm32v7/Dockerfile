@@ -1,5 +1,6 @@
 # create image from LTS node
-FROM arm32v7/node:carbon
+#FROM arm32v6/node:carbon
+FROM resin/raspberrypi-node
 
 # Create app directory
 WORKDIR /usr/src/raumserver
