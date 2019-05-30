@@ -11,7 +11,7 @@ install:
   - sudo update-binfmts --display qemu-arm
 
 script:
-  - docker build -t skastenholz/rpi-raumserver .
+  - docker build -t skastenholz/rpi-raumserver arm32v7/.
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
