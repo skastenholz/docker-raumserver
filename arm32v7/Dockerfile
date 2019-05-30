@@ -1,5 +1,5 @@
 # create image from LTS node
-FROM arm32v7/node:carbon-jessie
+FROM arm32v7/node:carbon
 
 # Create app directory
 WORKDIR /usr/src/raumserver
@@ -9,6 +9,8 @@ WORKDIR /usr/src/raumserver
 # where available (npm@5+)
 COPY package*.json ./
 
+RUN ls -lah .
+RUN npm help
 RUN npm install
 
 # Bundle app source
